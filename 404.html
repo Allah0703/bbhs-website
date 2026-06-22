@@ -1,18 +1,684 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Page not found | Bangladesh Bio Health Society</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bangladesh Bio Health Society | BBHS</title>
+  <meta name="description" content="Bangladesh Bio Health Society is a professional scientific platform advancing bioscience, biomedical research, biotechnology, microbiology, One Health, and public health in Bangladesh.">
+  <meta name="keywords" content="Bangladesh Bio Health Society, BBHS, bioscience, biomedical research, biotechnology, microbiology, public health, One Health, Bangladesh">
+  <link rel="canonical" href="https://www.bangladeshbiohealthsociety.org/">
+  <style>
+    :root {
+      --primary:#075f73;
+      --primary-dark:#063944;
+      --secondary:#0ea5a4;
+      --accent:#f59e0b;
+      --ink:#102333;
+      --muted:#607382;
+      --bg:#f5fafb;
+      --white:#ffffff;
+      --line:#d9e8ed;
+      --shadow:0 18px 50px rgba(8,51,68,.13);
+      --radius:22px;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.65;
+    }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(1140px, calc(100% - 40px)); margin:0 auto; }
+
+    .topbar {
+      background:var(--primary-dark);
+      color:#dff8fa;
+      padding:8px 0;
+      font-size:14px;
+    }
+    .topbar .container {
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .topbar a { color:#fff; font-weight:700; }
+
+    header {
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(12px);
+    }
+    .nav {
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:22px;
+    }
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:13px;
+      color:var(--primary-dark);
+      font-weight:900;
+      letter-spacing:-.03em;
+      font-size:22px;
+    }
+    .brand-mark {
+      width:48px;
+      height:48px;
+      border-radius:15px;
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      color:#fff;
+      display:grid;
+      place-items:center;
+      font-size:16px;
+      box-shadow:0 12px 25px rgba(14,165,164,.26);
+    }
+    .brand small {
+      display:block;
+      color:var(--muted);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin-top:-3px;
+    }
+    .menu {
+      display:flex;
+      gap:20px;
+      font-weight:700;
+      font-size:15px;
+      color:#2d4a57;
+      align-items:center;
+    }
+    .menu a {
+      padding:8px 0;
+      border-bottom:2px solid transparent;
+    }
+    .menu a:hover {
+      color:var(--primary);
+      border-color:var(--secondary);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 12% 15%, rgba(14,165,164,.22), transparent 32%),
+        radial-gradient(circle at 88% 12%, rgba(245,158,11,.18), transparent 28%),
+        linear-gradient(135deg,#eaf9fb 0%, #ffffff 54%, #eef9f5 100%);
+      padding:92px 0 76px;
+      overflow:hidden;
+    }
+    .hero-grid {
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:46px;
+      align-items:center;
+    }
+    .eyebrow {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 13px;
+      background:#fff;
+      border:1px solid #bde4e7;
+      border-radius:999px;
+      color:var(--primary);
+      font-size:13px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    h1 {
+      margin:22px 0 20px;
+      color:#082f3b;
+      font-size:clamp(40px,5.8vw,68px);
+      line-height:1.05;
+      letter-spacing:-.055em;
+    }
+    .lead {
+      color:#36515f;
+      font-size:20px;
+      max-width:760px;
+      margin:0 0 28px;
+    }
+    .btn-row {
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:26px;
+    }
+    .btn {
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      gap:8px;
+      border-radius:999px;
+      padding:12px 19px;
+      font-weight:900;
+      border:1px solid transparent;
+      transition:.18s ease;
+    }
+    .btn-primary {
+      background:var(--primary);
+      color:#fff;
+      box-shadow:0 12px 26px rgba(11,95,115,.22);
+    }
+    .btn-primary:hover { background:var(--primary-dark); transform:translateY(-1px); }
+    .btn-light {
+      background:#fff;
+      color:var(--primary);
+      border-color:#c8e5eb;
+    }
+    .btn-light:hover { border-color:var(--primary); transform:translateY(-1px); }
+
+    .stats {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:34px;
+    }
+    .stat {
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 12px 30px rgba(8,51,68,.08);
+    }
+    .stat strong {
+      display:block;
+      color:var(--primary-dark);
+      font-size:24px;
+      line-height:1.1;
+    }
+    .stat span {
+      color:var(--muted);
+      font-size:13px;
+      font-weight:700;
+    }
+    .hero-card {
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:30px;
+      box-shadow:var(--shadow);
+      position:relative;
+    }
+    .hero-card:before {
+      content:"";
+      position:absolute;
+      inset:18px -16px -16px 18px;
+      background:linear-gradient(135deg,rgba(14,165,164,.24),rgba(11,95,115,.08));
+      border-radius:30px;
+      z-index:-1;
+    }
+    .hero-card h2 {
+      margin:0 0 10px;
+      color:#0b2f3b;
+      font-size:30px;
+      line-height:1.16;
+      letter-spacing:-.04em;
+    }
+    .hero-card p { color:var(--muted); margin:0; }
+    .icon-grid {
+      margin-top:20px;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
+    .icon-box {
+      border:1px solid var(--line);
+      background:#f9fcfd;
+      border-radius:18px;
+      padding:18px;
+    }
+    .icon-box .icon { font-size:28px; margin-bottom:8px; }
+    .icon-box h3 { margin:0 0 4px; font-size:17px; color:#0b3a49; }
+    .icon-box p { margin:0; font-size:14px; }
+
+    section { padding:78px 0; }
+    .section-title {
+      max-width:780px;
+      text-align:center;
+      margin:0 auto 38px;
+    }
+    .section-title .label {
+      color:var(--secondary);
+      font-size:13px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+    }
+    .section-title h2 {
+      color:#0b2f3b;
+      margin:8px 0 12px;
+      font-size:clamp(30px,4vw,46px);
+      line-height:1.14;
+      letter-spacing:-.04em;
+    }
+    .section-title p {
+      color:var(--muted);
+      font-size:18px;
+      margin:0;
+    }
+    .cards {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+    .card {
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:0 14px 32px rgba(8,51,68,.07);
+    }
+    .card h3 {
+      margin:0 0 10px;
+      color:#0b3a49;
+      font-size:22px;
+    }
+    .card p {
+      color:var(--muted);
+      margin:0;
+    }
+
+    .about {
+      background:#fff;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .about-grid {
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:42px;
+      align-items:start;
+    }
+    .panel {
+      background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+      color:#fff;
+      border-radius:30px;
+      padding:34px;
+      box-shadow:var(--shadow);
+    }
+    .panel h2 {
+      margin:0 0 14px;
+      font-size:34px;
+      letter-spacing:-.04em;
+      line-height:1.15;
+    }
+    .panel p { color:#e1f7fa; margin:0 0 20px; }
+    .checklist {
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:grid;
+      gap:13px;
+    }
+    .checklist li {
+      color:#eafcff;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+    .checklist li:before {
+      content:"✓";
+      color:#96f2e8;
+      font-weight:900;
+    }
+    .text-block h2 {
+      color:#0b2f3b;
+      font-size:38px;
+      line-height:1.15;
+      letter-spacing:-.04em;
+      margin:0 0 16px;
+    }
+    .text-block p {
+      color:#4b6370;
+      font-size:17px;
+      margin:0 0 16px;
+    }
+    .pill-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:22px;
+    }
+    .pill {
+      padding:8px 12px;
+      border-radius:999px;
+      background:#e9f7f8;
+      color:var(--primary);
+      font-weight:900;
+      font-size:13px;
+    }
+
+    .membership {
+      background:
+        linear-gradient(rgba(11,95,115,.94), rgba(7,63,76,.96)),
+        radial-gradient(circle at 20% 20%, rgba(14,165,164,.4), transparent 38%);
+      color:#fff;
+    }
+    .membership .section-title h2,
+    .membership .section-title p { color:#fff; }
+    .membership .section-title .label { color:#9df7ee; }
+    .member-cards {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+    .member-card {
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:var(--radius);
+      padding:28px;
+      backdrop-filter:blur(8px);
+    }
+    .member-card h3 { margin:0 0 10px; font-size:24px; }
+    .member-card p { color:#dbfbff; margin:0; }
+
+    .events-grid {
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:24px;
+      align-items:stretch;
+    }
+    .event-list { display:grid; gap:14px; }
+    .event {
+      display:grid;
+      grid-template-columns:84px 1fr;
+      gap:18px;
+      align-items:center;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+    }
+    .date {
+      background:#e8f8fa;
+      color:var(--primary);
+      border-radius:16px;
+      text-align:center;
+      font-weight:900;
+      padding:14px 8px;
+      line-height:1.1;
+    }
+    .date span {
+      display:block;
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .event h3 { margin:0 0 4px; color:#0b3a49; }
+    .event p { margin:0; color:var(--muted); }
+    .publication-card {
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:32px;
+      box-shadow:var(--shadow);
+      height:100%;
+    }
+    .publication-card h3 {
+      margin:0 0 12px;
+      color:#0b2f3b;
+      font-size:28px;
+      line-height:1.15;
+      letter-spacing:-.03em;
+    }
+    .publication-card p {
+      color:var(--muted);
+      margin:0 0 18px;
+    }
+
+    .contact {
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+    .contact-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+    }
+    .contact-box {
+      background:#f8fcfd;
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:30px;
+    }
+    .contact-box h3 {
+      margin:0 0 12px;
+      color:#0b3a49;
+      font-size:24px;
+    }
+    .contact-box p { color:var(--muted); margin:0 0 16px; }
+    .contact-item {
+      padding:14px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .contact-item:last-child { border-bottom:0; }
+    .contact-item strong { display:block; color:#0b2f3b; }
+    .contact-item span,
+    .contact-item a { color:var(--muted); }
+
+    footer {
+      background:#062f3a;
+      color:#d8f4f7;
+      padding:34px 0;
+      font-size:14px;
+    }
+    footer .container {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:18px;
+    }
+    footer a { color:#fff; font-weight:700; }
+
+    @media (max-width:900px) {
+      .hero-grid,.about-grid,.events-grid,.contact-grid { grid-template-columns:1fr; }
+      .cards,.member-cards { grid-template-columns:1fr 1fr; }
+      .menu { display:none; }
+    }
+    @media (max-width:640px) {
+      .container { width:min(100% - 28px, 1140px); }
+      .hero { padding:64px 0 50px; }
+      .stats,.cards,.member-cards,.icon-grid { grid-template-columns:1fr; }
+      .event { grid-template-columns:1fr; }
+      .topbar .container,.nav,footer .container { align-items:flex-start; }
+      h1 { font-size:38px; }
+      .lead { font-size:17px; }
+    }
+  </style>
 </head>
 <body>
-  <main class="section">
+  <div class="topbar">
     <div class="container">
-      <h1>Page not found</h1>
-      <p>The page you are looking for is not available.</p>
-      <a class="button primary" href="index.html">Back to home</a>
+      <div>Scientific Society · Bangladesh</div>
+      <div>Official: <a href="mailto:info@bangladeshbiohealthsociety.org">info@bangladeshbiohealthsociety.org</a> · Alternative: <a href="mailto:missionknu@gmail.com">missionknu@gmail.com</a></div>
     </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Bangladesh Bio Health Society home">
+        <span class="brand-mark">BBHS</span>
+        <span>Bangladesh Bio Health Society <small>Bio-health science platform</small></span>
+      </a>
+      <nav class="menu" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#focus">Focus Areas</a>
+        <a href="#membership">Membership</a>
+        <a href="#events">Events</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">BBHS · Bangladesh</span>
+          <h1>Advancing Bioscience, Biomedical Research, and Public Health in Bangladesh</h1>
+          <p class="lead">Bangladesh Bio Health Society is a professional scientific platform for researchers, clinicians, academics, students, and health professionals working across bioscience, biomedical research, biotechnology, microbiology, One Health, and public health.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#membership">Join BBHS</a>
+            <a class="btn btn-light" href="#contact">Contact Us</a>
+          </div>
+          <div class="stats" aria-label="Society highlights">
+            <div class="stat"><strong>Research</strong><span>Scientific collaboration</span></div>
+            <div class="stat"><strong>Training</strong><span>Workshops and seminars</span></div>
+            <div class="stat"><strong>Public Health</strong><span>Evidence-based awareness</span></div>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Key activities">
+          <h2>Building a professional home for bio-health science</h2>
+          <p>BBHS aims to connect Bangladeshi bio-health professionals and support scientific exchange through education, meetings, and collaborative initiatives.</p>
+          <div class="icon-grid">
+            <div class="icon-box"><div class="icon">🧬</div><h3>Bioscience</h3><p>Biology, biotechnology, and innovation.</p></div>
+            <div class="icon-box"><div class="icon">🔬</div><h3>Biomedical Research</h3><p>Disease mechanisms and diagnostics.</p></div>
+            <div class="icon-box"><div class="icon">🦠</div><h3>Microbiology</h3><p>AMR, microbes, and One Health.</p></div>
+            <div class="icon-box"><div class="icon">🌍</div><h3>Public Health</h3><p>Awareness, training, and outreach.</p></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container about-grid">
+        <div class="panel">
+          <h2>Our purpose</h2>
+          <p>To create an inclusive scientific society that promotes research, education, collaboration, and public health awareness in Bangladesh.</p>
+          <ul class="checklist">
+            <li>Promote scientific collaboration among researchers and institutions.</li>
+            <li>Support research training, seminars, workshops, and scientific meetings.</li>
+            <li>Encourage evidence-based public health discussion and awareness.</li>
+            <li>Connect students, early-career scientists, clinicians, and professionals.</li>
+          </ul>
+        </div>
+        <div class="text-block">
+          <h2>A platform for science, health, and collaboration</h2>
+          <p>Bangladesh Bio Health Society is being developed as a professional forum for people working in bioscience, biomedical research, biotechnology, microbiology, healthcare, and public health.</p>
+          <p>The society seeks to build bridges among universities, research institutes, healthcare professionals, students, and early-career scientists through scientific exchange, training, and collaborative initiatives.</p>
+          <div class="pill-row">
+            <span class="pill">Bioscience</span>
+            <span class="pill">Biomedical Research</span>
+            <span class="pill">Biotechnology</span>
+            <span class="pill">Microbiology</span>
+            <span class="pill">One Health</span>
+            <span class="pill">Public Health</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus">
+      <div class="container">
+        <div class="section-title">
+          <div class="label">Focus areas</div>
+          <h2>What we work on</h2>
+          <p>BBHS supports scientific exchange and professional development across key bio-health disciplines relevant to Bangladesh and the global scientific community.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><h3>Bioscience & Biotechnology</h3><p>Supporting education, research exchange, and innovation in biological and biotechnology-related fields.</p></article>
+          <article class="card"><h3>Biomedical Research</h3><p>Encouraging work on disease mechanisms, diagnostics, therapeutics, antimicrobial resistance, and translational health science.</p></article>
+          <article class="card"><h3>Microbiology & One Health</h3><p>Promoting work on microbes, host–microbe interactions, environmental health, antimicrobial resistance, and One Health approaches.</p></article>
+          <article class="card"><h3>Public Health</h3><p>Supporting awareness, training, and evidence-based discussion on health challenges relevant to Bangladesh.</p></article>
+          <article class="card"><h3>Training & Mentorship</h3><p>Creating opportunities for students and early-career researchers through seminars, workshops, and mentorship activities.</p></article>
+          <article class="card"><h3>Scientific Communication</h3><p>Encouraging clear communication of scientific evidence through meetings, newsletters, publications, and outreach.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="membership" class="membership">
+      <div class="container">
+        <div class="section-title">
+          <div class="label">Membership</div>
+          <h2>Join as a student, researcher, or professional</h2>
+          <p>Membership categories and application details will be announced soon. Interested members may contact the BBHS team by email.</p>
+        </div>
+        <div class="member-cards">
+          <div class="member-card"><h3>Student Member</h3><p>For undergraduate, graduate, and postgraduate students interested in bio-health science.</p></div>
+          <div class="member-card"><h3>Professional Member</h3><p>For researchers, clinicians, academics, laboratory professionals, and public health professionals.</p></div>
+          <div class="member-card"><h3>Lifetime Member</h3><p>For senior professionals and supporters who wish to contribute to the long-term development of BBHS.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events">
+      <div class="container">
+        <div class="section-title">
+          <div class="label">Events and programs</div>
+          <h2>Scientific meetings, training, and outreach</h2>
+          <p>Upcoming seminars, workshops, conferences, and public health activities will be posted here.</p>
+        </div>
+        <div class="events-grid">
+          <div class="event-list">
+            <div class="event"><div class="date">Soon<span>2026</span></div><div><h3>Inaugural scientific seminar</h3><p>Theme, speakers, and registration details will be announced.</p></div></div>
+            <div class="event"><div class="date">Soon<span>2026</span></div><div><h3>Research training workshop</h3><p>Planned topics include scientific writing, data presentation, and laboratory research methods.</p></div></div>
+            <div class="event"><div class="date">Soon<span>2026</span></div><div><h3>Public health awareness session</h3><p>A community-focused program addressing evidence-based health communication.</p></div></div>
+          </div>
+          <div class="publication-card">
+            <h3>Collaborate with BBHS</h3>
+            <p>BBHS welcomes collaboration with academic institutions, research groups, healthcare professionals, and scientific communities.</p>
+            <a class="btn btn-primary" href="mailto:info@bangladeshbiohealthsociety.org">Send a proposal</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="about">
+      <div class="container">
+        <div class="section-title">
+          <div class="label">Publications</div>
+          <h2>Scientific communication and publication links</h2>
+          <p>BBHS will share news, reports, educational materials, and scientific updates. Formal publication partnerships will be announced after approval by the society committee.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><h3>News & Updates</h3><p>Society announcements, event reports, member achievements, and scientific updates will appear here.</p></article>
+          <article class="card"><h3>Educational Resources</h3><p>Training notes, workshop materials, and public health resources will be added gradually.</p></article>
+          <article class="card"><h3>Microbial Systems Journal</h3><p>Microbial Systems may be linked as an associated scientific publication platform after formal approval by the BBHS committee. Until then, it will be presented only as a possible publication partner.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container contact-grid">
+        <div class="contact-box">
+          <h3>Contact BBHS</h3>
+          <div class="contact-item"><strong>Official email</strong><a href="mailto:info@bangladeshbiohealthsociety.org">info@bangladeshbiohealthsociety.org</a></div>
+          <div class="contact-item"><strong>Alternative email</strong><a href="mailto:missionknu@gmail.com">missionknu@gmail.com</a></div>
+          <div class="contact-item"><strong>Website</strong><span>www.bangladeshbiohealthsociety.org</span></div>
+          <div class="contact-item"><strong>Location</strong><span>Bangladesh · International collaboration welcome</span></div>
+        </div>
+        <div class="contact-box">
+          <h3>Current status</h3>
+          <p>The society website is being developed. Committee members, membership process, event calendar, and publication partnership details will be updated after formal approval.</p>
+          <a class="btn btn-primary" href="mailto:missionknu@gmail.com">Email BBHS</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> Bangladesh Bio Health Society. All rights reserved.</div>
+      <div><a href="#home">Back to top</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
