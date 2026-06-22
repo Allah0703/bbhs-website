@@ -36,42 +36,100 @@
 <main>
   <section class="page-hero">
     <div class="container">
-      <span class="eyebrow">Publications</span>
-      <h1>Scientific communication and publication links</h1>
-      <p>BBHS will share society news, educational resources, event reports, and scientific communication materials. Formal publication partnerships will be announced after committee approval.</p>
+      <span class="eyebrow">Publications and communication</span>
+      <h1>Health watch, educational notes, and publication links</h1>
+      <p>This section is designed for society news, health-science communication, educational resources, and future publication partnership information.</p>
     </div>
   </section>
 
   <section>
-    <div class="container cards">
-      <article class="card"><h3>News & Updates</h3><p>Society announcements, event reports, member achievements, scientific activities, and public health updates will appear here.</p><a class="btn btn-light" href="#news">Read more</a></article>
-      <article class="card"><h3>Educational Resources</h3><p>Training notes, workshop materials, research communication guides, and public health resources will be added gradually.</p><a class="btn btn-light" href="#educational">Read more</a></article>
-      <article class="card"><h3>Microbial Systems Journal</h3><p>Microbial Systems is a scientific publication platform related to microbiology, microbial ecology, host–microbe interactions, antimicrobial resistance, and biomedical microbial research.</p><a class="btn btn-light" href="#microbial-systems">Read more</a></article>
+    <div class="container feature-grid">
+      <div class="feature-card">
+        <span class="eyebrow">Health watch example</span>
+        <h2>Dengue and mosquito-borne disease awareness</h2>
+        <p>Bangladesh and many tropical regions regularly face mosquito-borne disease risks. BBHS can use this space to share evidence-based awareness notes, prevention messages, event announcements, and links to official public health updates.</p>
+        <ul class="detail-list">
+          <li>Share prevention messages in simple language for students and community members.</li>
+          <li>Link to official health agencies rather than spreading unverified numbers.</li>
+          <li>Prepare short educational posts on symptoms, prevention, and when to seek medical care.</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="resources.html">Open health resources</a>
+          <a class="btn btn-light" href="https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue" target="_blank" rel="noopener">WHO dengue information</a>
+        </div>
+      </div>
+
+      <div class="visual-card">
+        <svg viewBox="0 0 520 280" role="img" aria-label="Health watch illustration">
+          <defs>
+            <linearGradient id="hw" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#80efe6"/>
+              <stop offset="100%" stop-color="#ffcf76"/>
+            </linearGradient>
+          </defs>
+          <rect x="48" y="52" width="424" height="178" rx="28" fill="rgba(255,255,255,.14)" stroke="rgba(255,255,255,.35)"/>
+          <circle cx="156" cy="142" r="58" fill="url(#hw)" opacity=".95"/>
+          <path d="M156 100v84M114 142h84" stroke="#073d49" stroke-width="18" stroke-linecap="round"/>
+          <g fill="none" stroke="#ffffff" stroke-width="4" opacity=".8">
+            <path d="M270 92h130M270 125h160M270 158h112M270 191h145"/>
+          </g>
+          <circle cx="430" cy="86" r="14" fill="#ffcf76"/>
+          <circle cx="430" cy="194" r="14" fill="#80efe6"/>
+        </svg>
+        <h3>Visual health communication</h3>
+        <p>A dedicated space for evidence-based health messages, awareness notes, and links to trusted sources.</p>
+      </div>
     </div>
   </section>
 
   <section class="about-band">
-    <div class="container publication-detail-grid">
-      <div id="news" class="detail-section">
-        <h2>News & Updates</h2>
-        <p>This section will be used for official BBHS announcements, program updates, workshop notices, event reports, member achievements, and society-related scientific news.</p>
-        <p>Only verified society information should be posted here. Public health updates should be written carefully and should not replace professional medical advice.</p>
+    <div class="container">
+      <div class="section-title">
+        <div class="label">Publication modules</div>
+        <h2>What can be published here</h2>
+        <p>These blocks are now functional content areas, not repeated read-more sections.</p>
       </div>
 
-      <div id="educational" class="detail-section">
-        <h2>Educational Resources</h2>
-        <p>BBHS may prepare and share educational materials for students, researchers, and public health professionals. Possible materials include scientific writing guides, workshop slides, research method notes, public health awareness sheets, and curated reading lists.</p>
-        <p>Members can also use the dedicated Resources page for links to PubMed, PMC, WHO, CDC, NIH, and other open educational sources.</p>
-        <a class="btn btn-primary" href="resources.html">Open Resources</a>
+      <div class="cards">
+        <article class="card">
+          <h3>Society news</h3>
+          <p>Official BBHS announcements, program updates, workshop notices, event reports, committee updates, and member achievements.</p>
+          <a class="btn btn-light" href="#society-news">Details</a>
+        </article>
+        <article class="card">
+          <h3>Educational notes</h3>
+          <p>Short guides on literature search, reference management, manuscript preparation, bioinformatics tools, and scientific communication.</p>
+          <a class="btn btn-light" href="#educational-notes">Details</a>
+        </article>
+        <article class="card">
+          <h3>Microbial Systems</h3>
+          <p>A microbiology-focused publication platform that may be linked with BBHS in the future after formal approval.</p>
+          <a class="btn btn-light" href="#microbial-systems">Details</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container publication-detail-grid">
+      <div id="society-news" class="detail-section">
+        <h2>Society news</h2>
+        <p>This section can be used for verified BBHS activities only: launch announcements, meeting notices, training schedules, event reports, public health outreach activities, and member achievements.</p>
+        <p>For medical or public health updates, BBHS should link to reliable sources and avoid posting unverified case numbers or treatment advice.</p>
+      </div>
+
+      <div id="educational-notes" class="detail-section">
+        <h2>Educational notes</h2>
+        <p>BBHS can publish practical educational notes for students and young researchers. Suggested topics include how to search papers in PubMed, how to use Zotero or Mendeley, how to prepare a reference list, how to start basic Python or R coding, and how to use BLAST or QIIME 2 for beginner bioinformatics.</p>
+        <p>This content can gradually become a useful learning hub for Bangladeshi students and early-career researchers.</p>
+        <a class="btn btn-primary" href="resources.html">Open resource hub</a>
       </div>
 
       <div id="microbial-systems" class="detail-section">
         <h2>Microbial Systems Journal</h2>
         <p>Microbial Systems is a scientific publication platform covering microbiology, microbial ecology, antimicrobial resistance, host–microbe interactions, environmental microbiology, and biomedical microbial research.</p>
         <p>If formally approved, Microbial Systems may be linked with BBHS as an associated publication or scientific communication platform. The relationship should be clearly defined by the society committee before using terms such as “official journal” or “affiliated journal.”</p>
-        <div class="journal-note">
-          Suggested wording for now: “Microbial Systems may serve as an associated scientific publication and communication platform after formal approval by the BBHS committee.”
-        </div>
+        <div class="journal-note">Suggested current wording: “Microbial Systems may serve as an associated scientific publication and communication platform after formal approval by the BBHS committee.”</div>
         <div class="btn-row">
           <a class="btn btn-primary" href="https://microbialsystems.org" target="_blank" rel="noopener">Visit Microbial Systems</a>
           <a class="btn btn-light" href="contact.html">Contact BBHS</a>
