@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Membership | Bangladesh Bio Health Society</title>
-  <meta name="description" content="Membership information for Bangladesh Bio Health Society.">
+  <meta name="description" content="Membership information and form for Bangladesh Bio Health Society.">
   <link rel="canonical" href="https://www.bangladeshbiohealthsociety.org/">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -12,7 +12,7 @@
 <div class="topbar">
   <div class="container">
     <div>Scientific Society · Bangladesh</div>
-    <div>Contact: <a href="mailto:info@bangladeshbiohealthsociety.org">info@bangladeshbiohealthsociety.org</a></div>
+    <div>Contact: <a href="mailto:bangladeshbiohealthsociety@gmail.com">bangladeshbiohealthsociety@gmail.com</a></div>
   </div>
 </div>
 <header class="site-header">
@@ -37,27 +37,42 @@
   <section class="page-hero">
     <div class="container">
       <span class="eyebrow">Membership</span>
-      <h1>Join BBHS as a student, researcher, or professional</h1>
-      <p>Membership categories and application details will be announced after formal approval. Interested members may contact the BBHS team by email.</p>
+      <h1>Apply for BBHS membership</h1>
+      <p>Students, researchers, clinicians, academics, laboratory professionals, and public health professionals are welcome to express interest in BBHS membership.</p>
     </div>
   </section>
   <section>
-    <div class="container cards">
-      <article class="card"><h3>Student Member</h3><p>For undergraduate, graduate, and postgraduate students interested in bioscience, biomedical research, microbiology, biotechnology, or public health.</p></article>
-      <article class="card"><h3>Professional Member</h3><p>For researchers, clinicians, academics, laboratory professionals, biotechnology professionals, and public health workers.</p></article>
-      <article class="card"><h3>Lifetime Member</h3><p>For senior professionals and supporters who wish to contribute to the long-term development of BBHS.</p></article>
-    </div>
-  </section>
-  <section class="about-band">
-    <div class="container">
-      <div class="section-title">
-        <div class="label">Member benefits</div>
-        <h2>What members can expect</h2>
+    <div class="container about-grid">
+      <div>
+        <div class="cards" style="grid-template-columns:1fr;">
+          <article class="card"><h3>Student Member</h3><p>For undergraduate, graduate, and postgraduate students interested in bio-health science.</p></article>
+          <article class="card"><h3>Professional Member</h3><p>For researchers, clinicians, academics, laboratory professionals, biotechnology professionals, and public health workers.</p></article>
+          <article class="card"><h3>Lifetime Member</h3><p>For senior professionals and supporters who wish to contribute to the long-term development of BBHS.</p></article>
+        </div>
+        <p class="notice" style="margin-top:20px;">Membership applications are reviewed by the BBHS team. Submission of this form does not automatically confirm membership.</p>
       </div>
-      <div class="cards">
-        <article class="card"><h3>Scientific networking</h3><p>Connection with researchers, students, clinicians, and professionals in bio-health fields.</p></article>
-        <article class="card"><h3>Training opportunities</h3><p>Access to seminars, workshops, and professional development programs.</p></article>
-        <article class="card"><h3>Community contribution</h3><p>Participation in public health awareness, scientific communication, and collaborative activities.</p></article>
+      <div class="form-card">
+        <h2 style="margin-top:0;color:#0b3a49;">Membership interest form</h2>
+        <p style="color:#617483;">Please complete the form below. The submitted information will be sent to the BBHS email inbox.</p>
+        <form action="https://formsubmit.co/bangladeshbiohealthsociety@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New BBHS Membership Application">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://www.bangladeshbiohealthsociety.org/thank-you.html">
+          <div class="form-grid">
+            <div class="form-group"><label for="full-name">Full name *</label><input id="full-name" name="Full Name" type="text" required></div>
+            <div class="form-group"><label for="email">Email *</label><input id="email" name="Email" type="email" required></div>
+            <div class="form-group"><label for="phone">Phone / WhatsApp</label><input id="phone" name="Phone or WhatsApp" type="text"></div>
+            <div class="form-group"><label for="country">Country *</label><input id="country" name="Country" type="text" required></div>
+            <div class="form-group full"><label for="affiliation">Affiliation / Institution *</label><input id="affiliation" name="Affiliation or Institution" type="text" required></div>
+            <div class="form-group"><label for="position">Current position *</label><select id="position" name="Current Position" required><option value="">Select one</option><option>Student</option><option>Researcher</option><option>Clinician</option><option>Academic</option><option>Laboratory Professional</option><option>Public Health Professional</option><option>Other</option></select></div>
+            <div class="form-group"><label for="member-type">Membership type *</label><select id="member-type" name="Membership Type" required><option value="">Select one</option><option>Student Member</option><option>Professional Member</option><option>Lifetime Member</option></select></div>
+            <div class="form-group full"><label for="interest">Research / professional interest</label><input id="interest" name="Research or Professional Interest" type="text" placeholder="e.g., microbiology, public health, biotechnology"></div>
+            <div class="form-group full"><label for="message">Short message</label><textarea id="message" name="Message" placeholder="Write a short note about your interest in joining BBHS."></textarea></div>
+            <div class="form-group full"><button class="btn btn-primary" type="submit">Submit membership interest</button></div>
+          </div>
+        </form>
+        <p class="help-text">First-time setup note: the first test submission may send an activation email to the BBHS Gmail inbox. Please open that email and confirm activation once.</p>
       </div>
     </div>
   </section>
