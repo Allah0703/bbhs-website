@@ -1,9 +1,9 @@
 # Bangladesh Bio Health Society Website
 
-Premium multi-page static website for Bangladesh Bio Health Society (BBHS), ready for GitHub Pages.
+Simple, professional multi-page static website for Bangladesh Bio Health Society (BBHS).
 
-Updates:
-- Homepage redesigned with a more premium and professional look
-- Publications page redesigned with Health Watch example and visual illustration
-- Resources page expanded with literature search, reference management, coding, bioinformatics, books, and health update links
-- Membership form sends data to BBHS Gmail using FormSubmit
+Latest update:
+- Publications page simplified
+- BBC Bangla external link added
+- Resources page made practical: journals, reference managers, coding, books, bioinformatics, health updates
+- Google verification tag preserved in index.html
