@@ -112,3 +112,26 @@ footer a{color:#fff;font-weight:700}
 @media(max-width:640px){.container{width:min(100% - 28px,1140px)}.hero{padding:64px 0 50px}.stats,.cards,.form-grid{grid-template-columns:1fr}.form-group.full{grid-column:auto}h1{font-size:38px}.lead{font-size:17px}}
 
 .card a.btn{margin-top:12px;}
+
+
+/* Refined BBHS layout updates */
+.hero-card .function-list{display:grid;gap:14px;margin-top:20px}
+.function-item{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:start;padding:14px;border:1px solid var(--line);background:#f8fcfd;border-radius:16px}
+.function-icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:#e9f7f8;color:var(--primary);font-size:21px;font-weight:900}
+.function-item h3{margin:0 0 3px;color:#0b3a49;font-size:17px}
+.function-item p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+.home-focus{padding-top:72px}
+.detail-section{background:#fff;border:1px solid var(--line);border-radius:28px;padding:34px;margin-bottom:24px;box-shadow:0 14px 32px rgba(8,51,68,.06)}
+.detail-section h2{margin:0 0 12px;color:#0b2f3b;font-size:32px;line-height:1.15;letter-spacing:-.03em}
+.detail-section p{color:#4b6370;font-size:17px;margin:0 0 14px}
+.detail-list{margin:14px 0 0;padding-left:20px;color:#4b6370}
+.detail-list li{margin:7px 0}
+.card .btn{margin-top:18px}
+.card p:last-of-type{margin-bottom:0}
+.publication-detail-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.journal-note{background:#eef8fa;border:1px solid #cde8ee;border-radius:18px;padding:18px;color:#2f5360}
+.hero-bottom-strip{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hero-bottom-strip .mini-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 12px 30px rgba(8,51,68,.07)}
+.hero-bottom-strip h3{margin:0 0 6px;color:#0b3a49;font-size:18px}
+.hero-bottom-strip p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+@media(max-width:900px){.hero-bottom-strip{grid-template-columns:1fr}.function-item{grid-template-columns:1fr}}

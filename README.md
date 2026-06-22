@@ -3,6 +3,8 @@
 Professional multi-page static website for Bangladesh Bio Health Society (BBHS), ready for GitHub Pages.
 
 Updates:
-- Professor and academic ranks added to membership form
-- Resources page added with educational and health update links
+- Homepage refined with no empty hero area
+- Focus Areas page now has Read More buttons and detailed sections
+- Publications page now has Read More buttons and detailed sections
+- Microbial Systems wording kept professional and conditional
 - Membership form sends data to BBHS Gmail using FormSubmit
